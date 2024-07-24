@@ -3358,6 +3358,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@reduxjs/toolkit@npm:^2.2.6":
+  version: 2.2.6
+  resolution: "@reduxjs/toolkit@npm:2.2.6"
+  dependencies:
+    immer: "npm:^10.0.3"
+    redux: "npm:^5.0.1"
+    redux-thunk: "npm:^3.1.0"
+    reselect: "npm:^5.1.0"
+  peerDependencies:
+    react: ^16.9.0 || ^17.0.0 || ^18
+    react-redux: ^7.2.1 || ^8.1.3 || ^9.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-redux:
+      optional: true
+  checksum: 10c0/60af753e6d02c8acd3c5bc843c846d60b19821d93ff9f4415fa7011ebf17a85301ed42132fabc1aaee8523d8f61418b5ba164a11c31ab29937e485842d3744a0
+  languageName: node
+  linkType: hard
+
 "@remix-run/router@npm:1.16.1":
   version: 1.16.1
   resolution: "@remix-run/router@npm:1.16.1"
@@ -4742,6 +4762,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cytoscape-fcose@npm:^2":
+  version: 2.2.4
+  resolution: "@types/cytoscape-fcose@npm:2.2.4"
+  dependencies:
+    "@types/cytoscape": "npm:*"
+  checksum: 10c0/2b7887f1777e5b8fea1eac6efe78549959df91dba044084f871365d2e1429081fa9823eba97fb0e2122e4d379ae02aea3dd942c4bc0e7db02d108623286ee33a
+  languageName: node
+  linkType: hard
+
+"@types/cytoscape@npm:*, @types/cytoscape@npm:^3":
+  version: 3.21.5
+  resolution: "@types/cytoscape@npm:3.21.5"
+  checksum: 10c0/959c536b31b3f4da432531113e7aef48981847c98be217a245a70a3fa80c433d0669597d9cf3f83613e4ec8f8c1e3f60b038fa87be6fc844da123bd5439f916c
+  languageName: node
+  linkType: hard
+
 "@types/detect-port@npm:^1.3.0":
   version: 1.3.5
   resolution: "@types/detect-port@npm:1.3.5"
@@ -4957,6 +4993,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-cytoscapejs@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "@types/react-cytoscapejs@npm:1.2.5"
+  dependencies:
+    "@types/cytoscape": "npm:*"
+    "@types/react": "npm:*"
+  checksum: 10c0/dadaa63a98ec9c0f3ff000d17486c2a4ef9cae54cad2642d156f9eafdd45fcfc0aea908f62e7dcf155c23b09e3617bbc1ce8fb637a881a80e1b38b8f8674649f
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^18.3.0":
   version: 18.3.0
   resolution: "@types/react-dom@npm:18.3.0"
@@ -5044,6 +5090,20 @@ __metadata:
   version: 3.0.2
   resolution: "@types/unist@npm:3.0.2"
   checksum: 10c0/39f220ce184a773c55c18a127062bfc4d0d30c987250cd59bab544d97be6cfec93717a49ef96e81f024b575718f798d4d329eb81c452fc57d6d051af8b043ebf
+  languageName: node
+  linkType: hard
+
+"@types/use-sync-external-store@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@types/use-sync-external-store@npm:0.0.3"
+  checksum: 10c0/82824c1051ba40a00e3d47964cdf4546a224e95f172e15a9c62aa3f118acee1c7518b627a34f3aa87298a2039f982e8509f92bfcc18bea7c255c189c293ba547
+  languageName: node
+  linkType: hard
+
+"@types/uuid@npm:^10":
+  version: 10.0.0
+  resolution: "@types/uuid@npm:10.0.0"
+  checksum: 10c0/9a1404bf287164481cb9b97f6bb638f78f955be57c40c6513b7655160beb29df6f84c915aaf4089a1559c216557dc4d2f79b48d978742d3ae10b937420ddac60
   languageName: node
   linkType: hard
 
@@ -6432,6 +6492,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cose-base@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "cose-base@npm:2.2.0"
+  dependencies:
+    layout-base: "npm:^2.0.0"
+  checksum: 10c0/14b9f8100ac322a00777ffb1daeb3321af368bbc9cabe3103943361273baee2003202ffe38e4ab770960b600214224e9c196195a78d589521540aa694df7cdec
+  languageName: node
+  linkType: hard
+
 "cosmiconfig@npm:^9.0.0":
   version: 9.0.0
   resolution: "cosmiconfig@npm:9.0.0"
@@ -6515,6 +6584,24 @@ __metadata:
   version: 3.1.2
   resolution: "csstype@npm:3.1.2"
   checksum: 10c0/32c038af259897c807ac738d9eab16b3d86747c72b09d5c740978e06f067f9b7b1737e1b75e407c7ab1fe1543dc95f20e202b4786aeb1b8d3bdf5d5ce655e6c6
+  languageName: node
+  linkType: hard
+
+"cytoscape-fcose@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "cytoscape-fcose@npm:2.2.0"
+  dependencies:
+    cose-base: "npm:^2.2.0"
+  peerDependencies:
+    cytoscape: ^3.2.0
+  checksum: 10c0/ce472c9f85b9057e75c5685396f8e1f2468895e71b184913e05ad56dcf3092618fe59a1054f29cb0995051ba8ebe566ad0dd49a58d62845145624bd60cd44917
+  languageName: node
+  linkType: hard
+
+"cytoscape@npm:^3.30.1":
+  version: 3.30.1
+  resolution: "cytoscape@npm:3.30.1"
+  checksum: 10c0/d17d9009764d866472d71dd35b36d2a1998ea2afc61e84b00a7a616a6fc279d4aebe5d3f6b45af01d05efdd8f012ec17a1fdf640db02cd35841538a170f5364a
   languageName: node
   linkType: hard
 
@@ -8894,6 +8981,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immer@npm:^10.0.3":
+  version: 10.1.1
+  resolution: "immer@npm:10.1.1"
+  checksum: 10c0/b749e10d137ccae91788f41bd57e9387f32ea6d6ea8fd7eb47b23fd7766681575efc7f86ceef7fe24c3bc9d61e38ff5d2f49c2663b2b0c056e280a4510923653
+  languageName: node
+  linkType: hard
+
 "import-fresh@npm:^3.2.1, import-fresh@npm:^3.3.0":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
@@ -9712,6 +9806,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"layout-base@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "layout-base@npm:2.0.1"
+  checksum: 10c0/a44df9ef3cbff9916a10f616635e22b5787c89fa62b2fec6f99e8e6ee512c7cebd22668ce32dab5a83c934ba0a309c51a678aa0b40d70853de6c357893c0a88b
+  languageName: node
+  linkType: hard
+
 "lazy-universal-dotenv@npm:^4.0.0":
   version: 4.0.0
   resolution: "lazy-universal-dotenv@npm:4.0.0"
@@ -9939,6 +10040,7 @@ __metadata:
   dependencies:
     "@mantine/core": "npm:7.11.2"
     "@mantine/hooks": "npm:7.11.2"
+    "@reduxjs/toolkit": "npm:^2.2.6"
     "@storybook/addon-essentials": "npm:^8.1.10"
     "@storybook/addon-interactions": "npm:^8.1.10"
     "@storybook/addon-links": "npm:^8.1.10"
@@ -9950,11 +10052,17 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.4.6"
     "@testing-library/react": "npm:^16.0.0"
     "@testing-library/user-event": "npm:^14.5.2"
+    "@types/cytoscape": "npm:^3"
+    "@types/cytoscape-fcose": "npm:^2"
     "@types/react": "npm:^18.3.3"
+    "@types/react-cytoscapejs": "npm:^1.2.5"
     "@types/react-dom": "npm:^18.3.0"
+    "@types/uuid": "npm:^10"
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react": "npm:^4.3.1"
+    cytoscape: "npm:^3.30.1"
+    cytoscape-fcose: "npm:^2.2.0"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"
@@ -9971,13 +10079,16 @@ __metadata:
     prettier: "npm:^3.3.2"
     prop-types: "npm:^15.8.1"
     react: "npm:^18.3.1"
+    react-cytoscapejs: "npm:^2.0.0"
     react-dom: "npm:^18.3.1"
+    react-redux: "npm:^9.1.2"
     react-router-dom: "npm:^6.23.1"
     storybook: "npm:^8.1.10"
     storybook-dark-mode: "npm:^4.0.2"
     stylelint: "npm:^16.6.1"
     stylelint-config-standard-scss: "npm:^13.1.0"
     typescript: "npm:^5.5.2"
+    uuid: "npm:^10.0.0"
     vite: "npm:^5.3.1"
     vite-tsconfig-paths: "npm:^4.3.2"
     vitest: "npm:^1.6.0"
@@ -11370,6 +11481,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-cytoscapejs@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-cytoscapejs@npm:2.0.0"
+  dependencies:
+    prop-types: "npm:^15.8.1"
+  peerDependencies:
+    cytoscape: ^3.2.19
+    react: ">=15.0.0"
+  checksum: 10c0/4a7679fc5e78428433620a48c81795416804d7317845445ca572091c6826b8519a4a10dae38d78555c1aefd1f6e6f317fad73d3f6acde272c5abeeaf09742834
+  languageName: node
+  linkType: hard
+
 "react-docgen-typescript@npm:^2.2.2":
   version: 2.2.2
   resolution: "react-docgen-typescript@npm:2.2.2"
@@ -11472,6 +11595,25 @@ __metadata:
     react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: 10c0/9e37698ab3d8224fd6cf5a69845c0308720d04de8459757031de0304379cfd2c0c897834cc9f62869933c4702a97888ba51abeb6490b7282e237a4c19a5fab04
+  languageName: node
+  linkType: hard
+
+"react-redux@npm:^9.1.2":
+  version: 9.1.2
+  resolution: "react-redux@npm:9.1.2"
+  dependencies:
+    "@types/use-sync-external-store": "npm:^0.0.3"
+    use-sync-external-store: "npm:^1.0.0"
+  peerDependencies:
+    "@types/react": ^18.2.25
+    react: ^18.0
+    redux: ^5.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    redux:
+      optional: true
+  checksum: 10c0/56ac98228e011b26e0202346af9c8dd408ad5ea8235d8761c8e05ea0953b8ca801cdf9d1f481fdec7b285d7f30ceef7238b46b3df7636ef77dd5c2ea8c5be5b2
   languageName: node
   linkType: hard
 
@@ -11702,6 +11844,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"redux-thunk@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "redux-thunk@npm:3.1.0"
+  peerDependencies:
+    redux: ^5.0.0
+  checksum: 10c0/21557f6a30e1b2e3e470933247e51749be7f1d5a9620069a3125778675ce4d178d84bdee3e2a0903427a5c429e3aeec6d4df57897faf93eb83455bc1ef7b66fd
+  languageName: node
+  linkType: hard
+
+"redux@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "redux@npm:5.0.1"
+  checksum: 10c0/b10c28357194f38e7d53b760ed5e64faa317cc63de1fb95bc5d9e127fab956392344368c357b8e7a9bedb0c35b111e7efa522210cfdc3b3c75e5074718e9069c
+  languageName: node
+  linkType: hard
+
 "reflect.getprototypeof@npm:^1.0.4":
   version: 1.0.4
   resolution: "reflect.getprototypeof@npm:1.0.4"
@@ -11834,6 +11992,13 @@ __metadata:
   version: 1.0.0
   resolution: "requires-port@npm:1.0.0"
   checksum: 10c0/b2bfdd09db16c082c4326e573a82c0771daaf7b53b9ce8ad60ea46aa6e30aaf475fe9b164800b89f93b748d2c234d8abff945d2551ba47bf5698e04cd7713267
+  languageName: node
+  linkType: hard
+
+"reselect@npm:^5.1.0":
+  version: 5.1.1
+  resolution: "reselect@npm:5.1.1"
+  checksum: 10c0/219c30da122980f61853db3aebd173524a2accd4b3baec770e3d51941426c87648a125ca08d8c57daa6b8b086f2fdd2703cb035dd6231db98cdbe1176a71f489
   languageName: node
   linkType: hard
 
@@ -13716,6 +13881,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.0.0":
+  version: 1.2.2
+  resolution: "use-sync-external-store@npm:1.2.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/23b1597c10adf15b26ade9e8c318d8cc0abc9ec0ab5fc7ca7338da92e89c2536abd150a5891bf076836c352fdfa104fc7231fb48f806fd9960e0cbe03601abaf
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -13740,6 +13914,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: 10c0/02ba649de1b7ca8854bfe20a82f1dfbdda3fb57a22ab4a8972a63a34553cf7aa51bc9081cf7e001b035b88186d23689d69e71b510e610a09a4c66f68aa95b672
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "uuid@npm:10.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 10c0/eab18c27fe4ab9fb9709a5d5f40119b45f2ec8314f8d4cf12ce27e4c6f4ffa4a6321dc7db6c515068fa373c075b49691ba969f0010bf37f44c37ca40cd6bf7fe
   languageName: node
   linkType: hard
 
