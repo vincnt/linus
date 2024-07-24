@@ -1,12 +1,31 @@
-import { AppShell } from '@mantine/core';
+import { AppShell, Textarea, Button } from '@mantine/core';
 
+import { useState } from 'react';
 import Graph from '../graph';
-import { useGetLinetteElementsQuery } from '../queries/linette';
+import { useLazyPostRawSqlWrappedQuery, SqlQueryInput } from '../queries/linette';
 
 export function HomePage() {
-  const { data: graphData, isLoading } = useGetLinetteElementsQuery(
-    'unusedstringbutkeepingasanexample'
-  );
+  const [fetchGraphData, { data: graphData, isLoading }] =
+  useLazyPostRawSqlWrappedQuery();
+
+  const [formData, setFormData] = useState<SqlQueryInput>({
+    sqlString: '',
+    defaultSchema: 's',
+    defaultServer: 'ss',
+    defaultDatabase: 'dbo',
+  });
+
+  const handleFetchData = () => {
+    fetchGraphData(formData); // Pass the input string to the query
+  };
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      sqlString: event.target.value,
+    }));
+  };
+
   return (
     <AppShell
       header={{ height: 30 }}
@@ -27,9 +46,17 @@ export function HomePage() {
       </AppShell.Main>
       <AppShell.Aside>
         <AppShell.Section>
+        <div>
+            Paste your sql here
+        </div>
           <div>
-            test shell
+          <Textarea
+            resize="both"
+            placeholder="Your sql"
+            value={formData.sqlString}
+            onChange={handleInputChange} />
           </div>
+          <Button style={{ margin: 20 }} variant="filled" onClick={handleFetchData}>Load graph</Button>
         </AppShell.Section>
       </AppShell.Aside>
     </AppShell>
