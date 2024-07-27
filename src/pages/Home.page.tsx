@@ -5,7 +5,7 @@ import Graph from '../graph';
 import { useLazyPostRawSqlWrappedQuery, SqlQueryInput } from '../queries/linette';
 
 export function HomePage() {
-  const [fetchGraphData, { data: graphData, isLoading }] =
+  const [fetchGraphData, { data: graphData, isLoading, error }] =
   useLazyPostRawSqlWrappedQuery();
 
   const [formData, setFormData] = useState<SqlQueryInput>({
@@ -41,6 +41,7 @@ export function HomePage() {
 
       <AppShell.Main>
         { isLoading && <div>Loading graph</div>}
+        { error && 'status' in error && <div> Error!!! {error.status} {JSON.stringify(error.data)}</div>}
         { !isLoading && graphData &&
               <Graph graphData={graphData} />}
       </AppShell.Main>
