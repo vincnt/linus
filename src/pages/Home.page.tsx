@@ -14,7 +14,7 @@ export function HomePage() {
     defaultServer: 'ss',
     defaultDatabase: 'dbo',
   });
-  const [graphLayout, setGraphLayout] = useState<string | null>('fcose');
+  const [graphLayout, setGraphLayout] = useState<string>('fcose');
 
   const handleFetchData = () => {
     fetchGraphData(formData); // Pass the input string to the query
@@ -62,9 +62,11 @@ export function HomePage() {
           <Select
             label="Graph Layout Algorithm"
             placeholder="Pick value"
-            data={['random', 'fcose', 'circle', 'avsdf', 'dagre', 'breadthfirst']}
+            data={['fcose', 'circle', 'avsdf', 'dagre', 'breadthfirst', 'random']}
             value={graphLayout}
-            onChange={setGraphLayout}
+            onChange={(e) => setGraphLayout(e!)}
+            allowDeselect={false}
+            defaultValue="fcose"
           />
         </AppShell.Section>
       </AppShell.Aside>

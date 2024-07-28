@@ -23,10 +23,6 @@ const Graph = memo(({ graphData, layout }: GraphProps) => {
     ? CytoscapeComponent.normalizeElements(graphData)
     : undefined;
 
-  // useEffect(() => {
-  //   const cyLayout = cyRef.layout({ name: layout });
-  // }, [layout]);
-
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       {!normalizedElements && <div>Loading</div>}

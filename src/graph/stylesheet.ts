@@ -15,13 +15,40 @@ export default [
   {
     selector: 'node[type="unknown"]',
     css: {
-      'background-color': 'black',
-      'border-color': 'red',
-      shape: 'ellipse',
-      'border-width': '3px',
-      width: 10,
-      height: 10,
+      'background-color': 'white',
+      'border-color': 'blue',
+      'border-width': '1px',
+      width: 5,
+      height: 5,
       label: 'data(label)',
+      'text-valign': 'top',
+      'text-halign': 'left',
+    },
+  },
+  {
+    selector: 'node[type="column"]',
+    css: {
+      'background-color': 'green',
+      'border-color': 'white',
+      'border-width': '1px',
+      width: 5,
+      height: 5,
+      label: 'data(label)',
+      'text-valign': 'top',
+      'text-halign': 'left',
+    },
+  },
+  {
+    selector: 'node[type="parent"]',
+    css: {
+      'background-color': 'white',
+      'border-color': 'red',
+      'border-width': '1px',
+      width: 5,
+      height: 5,
+      label: 'data(label)',
+      'text-valign': 'top',
+      'text-halign': 'left',
     },
   },
   {
@@ -99,12 +126,13 @@ export default [
   {
     selector: 'edge',
     css: {
-      width: 2,
+      width: 1,
       'line-color': 'lightgray',
       'target-arrow-color': 'gray',
       'target-arrow-shape': 'vee',
       'curve-style': 'straight',
       'font-size': 3,
+      'arrow-scale': 0.5,
     },
   },
   {
@@ -141,7 +169,7 @@ export default [
   {
     selector: 'edge:selected',
     css: {
-      width: 5,
+      width: 4,
       'line-color': 'lightblue',
       'target-arrow-color': 'gray',
       'target-arrow-shape': 'vee',

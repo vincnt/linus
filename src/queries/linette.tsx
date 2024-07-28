@@ -18,7 +18,7 @@ export const linetteApi = createApi({
     }),
     postRawSqlWrapped: builder.query<TElements, SqlQueryInput>({
       query: (body) => ({
-        url: '/Linettus/ProcessWrappedSqlStrings',
+        url: '/Linettus/ProcessWrappedSqlStringsColumnLevelUnresolved',
         method: 'POST',
         body,
       }),
