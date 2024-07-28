@@ -4762,6 +4762,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/cytoscape-avsdf@npm:^1":
+  version: 1.0.3
+  resolution: "@types/cytoscape-avsdf@npm:1.0.3"
+  dependencies:
+    "@types/cytoscape": "npm:*"
+  checksum: 10c0/4a79a64c2cb9fb3c58be14df137bb424907c3e7aecdc10e3116919f3514c9d5b45bd992f65d16081612afcdf8b7c335e458c5b1d2843a881be9f239bd78a98c9
+  languageName: node
+  linkType: hard
+
+"@types/cytoscape-dagre@npm:^2":
+  version: 2.3.3
+  resolution: "@types/cytoscape-dagre@npm:2.3.3"
+  dependencies:
+    "@types/cytoscape": "npm:*"
+  checksum: 10c0/3129db3a5fec66ae94afae368e6d6a84a605123bd54c7715574aeeb9ab35d67912777eedbb0d62114865c5dcc51529f72d89db52c496454c03fa9dff7ddc4316
+  languageName: node
+  linkType: hard
+
 "@types/cytoscape-fcose@npm:^2":
   version: 2.2.4
   resolution: "@types/cytoscape-fcose@npm:2.2.4"
@@ -4771,7 +4789,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cytoscape@npm:*, @types/cytoscape@npm:^3":
+"@types/cytoscape@npm:*, @types/cytoscape@npm:^3.21.5":
   version: 3.21.5
   resolution: "@types/cytoscape@npm:3.21.5"
   checksum: 10c0/959c536b31b3f4da432531113e7aef48981847c98be217a245a70a3fa80c433d0669597d9cf3f83613e4ec8f8c1e3f60b038fa87be6fc844da123bd5439f916c
@@ -5817,6 +5835,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"avsdf-base@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "avsdf-base@npm:1.0.0"
+  dependencies:
+    layout-base: "npm:^1.0.0"
+  checksum: 10c0/84798e1e9b55d969610ca59188047a3dd01b0371faaf0b8e7ee0e3536dc30a0cd66f79d692fd8cff088f708383a217baf13065484fb6c8be3e77659719c1e0e3
+  languageName: node
+  linkType: hard
+
 "axe-core@npm:^4.9.1":
   version: 4.9.1
   resolution: "axe-core@npm:4.9.1"
@@ -6587,6 +6614,51 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cytoscape-avsdf@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "cytoscape-avsdf@npm:1.0.0"
+  dependencies:
+    avsdf-base: "npm:^1.0.0"
+  peerDependencies:
+    cytoscape: ^3.2.0
+  checksum: 10c0/ea30f217f4642deb302477a1939ccb22f32c33824a3f274a2898a747532c6c537528859ce75d0f9a773b8ccd01d4bb2c1c82c9d16db07a874d60addfe86b3675
+  languageName: node
+  linkType: hard
+
+"cytoscape-cise@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "cytoscape-cise@npm:2.0.0"
+  dependencies:
+    avsdf-base: "npm:^1.0.0"
+    cose-base: "npm:^2.2.0"
+  peerDependencies:
+    cytoscape: ^3.2.0
+  checksum: 10c0/d32a3ee9e86575bd6a6a55d395dad8fea3c1e242b8cd803107e7ca5e25c24b32cfe2e5c0b4452559d68b6ed3150d60ba0c5fc37678ce13fc95f1ee6eebafd1c8
+  languageName: node
+  linkType: hard
+
+"cytoscape-dagre@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "cytoscape-dagre@npm:2.5.0"
+  dependencies:
+    dagre: "npm:^0.8.5"
+  peerDependencies:
+    cytoscape: ^3.2.22
+  checksum: 10c0/f280c6edf6e85aff6dc564b3f35675a3b2b03a44e7177edebb8808c97bddf407c7599334950aca8d1a7cf8fda0fecffb341a12aac08d9977ffec932f5af1f0d9
+  languageName: node
+  linkType: hard
+
+"cytoscape-elk@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "cytoscape-elk@npm:2.2.0"
+  dependencies:
+    elkjs: "npm:^0.8.1"
+  peerDependencies:
+    cytoscape: ^3.2.0
+  checksum: 10c0/83660e374c4f8f13c3c77b3d0016472cac90f7de71c76c71e4718bdc029fdb15e83c9168177ba6e7c2a14f6972cecd6bf5da656e9a18c3ca34294d56dc49c5df
+  languageName: node
+  linkType: hard
+
 "cytoscape-fcose@npm:^2.2.0":
   version: 2.2.0
   resolution: "cytoscape-fcose@npm:2.2.0"
@@ -6602,6 +6674,16 @@ __metadata:
   version: 3.30.1
   resolution: "cytoscape@npm:3.30.1"
   checksum: 10c0/d17d9009764d866472d71dd35b36d2a1998ea2afc61e84b00a7a616a6fc279d4aebe5d3f6b45af01d05efdd8f012ec17a1fdf640db02cd35841538a170f5364a
+  languageName: node
+  linkType: hard
+
+"dagre@npm:^0.8.5":
+  version: 0.8.5
+  resolution: "dagre@npm:0.8.5"
+  dependencies:
+    graphlib: "npm:^2.1.8"
+    lodash: "npm:^4.17.15"
+  checksum: 10c0/1c021b66961aa9a700bb6ec51747bcc214720a661ad6cb1878eab7316ecb550a759664a6754081a315b37d0355e3c19ff162813b36f20cbeb2e37f7440364d62
   languageName: node
   linkType: hard
 
@@ -6988,6 +7070,13 @@ __metadata:
   version: 1.4.782
   resolution: "electron-to-chromium@npm:1.4.782"
   checksum: 10c0/bf3b7e3c3d3ba20ee94958c0a9fa42dd6224140e070f3e31306986c6974ddb26f4b0ebe688ee140b98ebb410d3cb79f60a2e63832b767e800dbb2f471e5d72a4
+  languageName: node
+  linkType: hard
+
+"elkjs@npm:^0.8.1":
+  version: 0.8.2
+  resolution: "elkjs@npm:0.8.2"
+  checksum: 10c0/550b48a44143f6d1ac12482b301670a92ac6a685b2f6a0089ee0b66a4037b800890c507b60afd572851d3208e92ff2ed7cc30785e78acb196b422c3abfd20d6f
   languageName: node
   linkType: hard
 
@@ -8672,6 +8761,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"graphlib@npm:^2.1.8":
+  version: 2.1.8
+  resolution: "graphlib@npm:2.1.8"
+  dependencies:
+    lodash: "npm:^4.17.15"
+  checksum: 10c0/41c525e4d91a6d8b4e8da1883bf4e85689a547e908557ccc53f64db9141bdfb351b9162a79f13cae81c5b3a410027f59e4fc1edc1ea442234ec08e629859b188
+  languageName: node
+  linkType: hard
+
 "gunzip-maybe@npm:^1.4.2":
   version: 1.4.2
   resolution: "gunzip-maybe@npm:1.4.2"
@@ -9806,6 +9904,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"layout-base@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "layout-base@npm:1.0.2"
+  checksum: 10c0/2a55d0460fd9f6ed53d7e301b9eb3dea19bda03815d616a40665ce6dc75c1f4d62e1ca19a897da1cfaf6de1b91de59cd6f2f79ba1258f3d7fccc7d46ca7f3337
+  languageName: node
+  linkType: hard
+
 "layout-base@npm:^2.0.0":
   version: 2.0.1
   resolution: "layout-base@npm:2.0.1"
@@ -10052,7 +10157,9 @@ __metadata:
     "@testing-library/jest-dom": "npm:^6.4.6"
     "@testing-library/react": "npm:^16.0.0"
     "@testing-library/user-event": "npm:^14.5.2"
-    "@types/cytoscape": "npm:^3"
+    "@types/cytoscape": "npm:^3.21.5"
+    "@types/cytoscape-avsdf": "npm:^1"
+    "@types/cytoscape-dagre": "npm:^2"
     "@types/cytoscape-fcose": "npm:^2"
     "@types/react": "npm:^18.3.3"
     "@types/react-cytoscapejs": "npm:^1.2.5"
@@ -10062,6 +10169,10 @@ __metadata:
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react": "npm:^4.3.1"
     cytoscape: "npm:^3.30.1"
+    cytoscape-avsdf: "npm:^1.0.0"
+    cytoscape-cise: "npm:^2.0.0"
+    cytoscape-dagre: "npm:^2.5.0"
+    cytoscape-elk: "npm:^2.2.0"
     cytoscape-fcose: "npm:^2.2.0"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
@@ -10092,6 +10203,7 @@ __metadata:
     vite: "npm:^5.3.1"
     vite-tsconfig-paths: "npm:^4.3.2"
     vitest: "npm:^1.6.0"
+    web-worker: "npm:^1.3.0"
   languageName: unknown
   linkType: soft
 
@@ -14138,6 +14250,13 @@ __metadata:
   dependencies:
     defaults: "npm:^1.0.3"
   checksum: 10c0/5b61ca583a95e2dd85d7078400190efd452e05751a64accb8c06ce4db65d7e0b0cde9917d705e826a2e05cc2548f61efde115ffa374c3e436d04be45c889e5b4
+  languageName: node
+  linkType: hard
+
+"web-worker@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "web-worker@npm:1.3.0"
+  checksum: 10c0/bca341b421f07c2d33aa205d463e6a2d3d376fb0628a01052dc343fd88a1d688df58d1c7fe36f631d0d860bbd3060f5014cca67d6f8781634b6c2fae25d1fc70
   languageName: node
   linkType: hard
 

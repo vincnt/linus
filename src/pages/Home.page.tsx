@@ -1,4 +1,4 @@
-import { AppShell, Textarea, Button } from '@mantine/core';
+import { AppShell, Textarea, Button, Select } from '@mantine/core';
 
 import { useState } from 'react';
 import Graph from '../graph';
@@ -14,6 +14,7 @@ export function HomePage() {
     defaultServer: 'ss',
     defaultDatabase: 'dbo',
   });
+  const [graphLayout, setGraphLayout] = useState<string | null>('fcose');
 
   const handleFetchData = () => {
     fetchGraphData(formData); // Pass the input string to the query
@@ -42,11 +43,11 @@ export function HomePage() {
       <AppShell.Main>
         { isLoading && <div>Loading graph</div>}
         { error && 'status' in error && <div> Error!!! {error.status} {JSON.stringify(error.data)}</div>}
-        { !isLoading && graphData &&
-              <Graph graphData={graphData} />}
+        { !isLoading && graphData && graphLayout &&
+              <Graph graphData={graphData} layout={graphLayout} />}
       </AppShell.Main>
       <AppShell.Aside>
-        <AppShell.Section>
+        <AppShell.Section style={{ padding: '10px' }}>
         <div>
             Paste your sql here
         </div>
@@ -58,6 +59,13 @@ export function HomePage() {
             onChange={handleInputChange} />
           </div>
           <Button style={{ margin: 20 }} variant="filled" onClick={handleFetchData}>Load graph</Button>
+          <Select
+            label="Graph Layout Algorithm"
+            placeholder="Pick value"
+            data={['random', 'fcose', 'circle', 'avsdf', 'dagre', 'breadthfirst']}
+            value={graphLayout}
+            onChange={setGraphLayout}
+          />
         </AppShell.Section>
       </AppShell.Aside>
     </AppShell>
