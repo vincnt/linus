@@ -1,24 +1,25 @@
-import React, { memo, useRef } from 'react';
-import cytoscape from 'cytoscape';
+import React, { memo, MutableRefObject } from 'react';
+import cytoscape, { Core } from 'cytoscape';
 import CytoscapeComponent from 'react-cytoscapejs';
 import fcose from 'cytoscape-fcose';
 import avsdf from 'cytoscape-avsdf';
 import dagre from 'cytoscape-dagre';
+import elk from 'cytoscape-elk';
 import { TElements } from './elements';
 import stylesheet from './stylesheet';
 
 cytoscape.use(fcose);
 cytoscape.use(avsdf);
 cytoscape.use(dagre);
+cytoscape.use(elk);
 
 interface GraphProps {
   graphData: TElements;
   layout: string;
+  cyRef: MutableRefObject<Core | null>
 }
 
-const Graph = memo(({ graphData, layout }: GraphProps) => {
-  const cyRef = useRef<cytoscape.Core | null>(null);
-
+const Graph = memo(({ graphData, layout, cyRef }: GraphProps) => {
   const normalizedElements = graphData
     ? CytoscapeComponent.normalizeElements(graphData)
     : undefined;

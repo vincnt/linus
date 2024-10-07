@@ -1,6 +1,7 @@
 import { AppShell, Textarea, Button, Select } from '@mantine/core';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import cytoscape from 'cytoscape';
 import Graph from '../graph';
 import { useLazyPostRawSqlWrappedQuery, SqlQueryInput } from '../queries/linette';
 
@@ -15,6 +16,7 @@ export function HomePage() {
     defaultDatabase: 'dbo',
   });
   const [graphLayout, setGraphLayout] = useState<string>('fcose');
+  const cyRef = useRef<cytoscape.Core | null>(null);
 
   const handleFetchData = () => {
     fetchGraphData(formData); // Pass the input string to the query
@@ -26,6 +28,40 @@ export function HomePage() {
       sqlString: event.target.value,
     }));
   };
+  //
+  // const layoutOptions = useCallback(() => {
+  //   return {
+  //     name: graphLayout,
+  //     randomize: false,
+  //     idealEdgeLength: 100,
+  //     nodeOverlap: 20,
+  //     refresh: 20,
+  //     fit: true,
+  //     padding: 30,
+  //     animate: true,
+  //     animationDuration: 1000,
+  //     nodeDimensionsIncludeLabels: true,
+  //     // Add more fcose-specific options here
+  //   };
+  // }, [graphLayout]);
+
+  useEffect(() => {
+    if (graphLayout === 'fcose') {
+      cyRef.current?.layout({
+        name: graphLayout,
+        animate: false,
+      });
+    }
+    if (graphLayout === 'elk') {
+      cyRef.current?.layout({
+        name: 'elk',
+        elk: {
+          algorithm: 'layered',
+          'elk.hierarchyHandling': 'INCLUDE_CHILDREN',
+        },
+      }).run();
+    }
+  }, [graphLayout]);
 
   return (
     <AppShell
@@ -44,7 +80,7 @@ export function HomePage() {
         { isLoading && <div>Loading graph</div>}
         { error && 'status' in error && <div> Error!!! {error.status} {JSON.stringify(error.data)}</div>}
         { !isLoading && graphData && graphLayout &&
-              <Graph graphData={graphData} layout={graphLayout} />}
+              <Graph graphData={graphData} layout={graphLayout} cyRef={cyRef} />}
       </AppShell.Main>
       <AppShell.Aside>
         <AppShell.Section style={{ padding: '10px' }}>
@@ -62,7 +98,7 @@ export function HomePage() {
           <Select
             label="Graph Layout Algorithm"
             placeholder="Pick value"
-            data={['fcose', 'circle', 'avsdf', 'dagre', 'breadthfirst', 'random']}
+            data={['fcose', 'breadthfirst', 'random', 'elk']} // these suck (circle, avsdf, dagre). breadth first is kinda nice but too flat?
             value={graphLayout}
             onChange={(e) => setGraphLayout(e!)}
             allowDeselect={false}
